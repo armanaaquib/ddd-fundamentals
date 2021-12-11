@@ -12,8 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CheckoutTest {
 
     public static final Price TEN_RUPEES = new Price(new BigDecimal(10), Currency.getInstance("INR"));
-    public static final Product I_PAD_PRO = new Product("IPad Pro", TEN_RUPEES);
-    public static final Product HERO_INK_PEN = new Product("Hero ink Pen", TEN_RUPEES);
+    public static final Weight FIFTY_GRAM = new Weight(new BigDecimal(50));
+    public static final Product I_PAD_PRO = new Product("IPad Pro", TEN_RUPEES, FIFTY_GRAM);
+    public static final Product HERO_INK_PEN = new Product("Hero ink Pen", TEN_RUPEES, FIFTY_GRAM);
 
 
     @Test

@@ -2,6 +2,7 @@ package com.ddd.workshop.domain.domain_service;
 
 import com.ddd.workshop.domain.Price;
 import com.ddd.workshop.domain.Product;
+import com.ddd.workshop.domain.Weight;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -14,8 +15,9 @@ class CompetitorBasedPricerTest {
 
     public static final Price HUNDRED_RUPEES = new Price(new BigDecimal(100), Currency.getInstance("INR"));
     public static final Price FIFTY_RUPEES = new Price(new BigDecimal(50), Currency.getInstance("INR"));
-    public static final Product I_PAD_PRO = new Product("IPad Pro", HUNDRED_RUPEES);
-    public static final Product HERO_INK_PEN = new Product("Hero ink Pen", FIFTY_RUPEES);
+    public static final Weight FIFTY_GRAM = new Weight(new BigDecimal(50));
+    public static final Product I_PAD_PRO = new Product("IPad Pro", HUNDRED_RUPEES, FIFTY_GRAM);
+    public static final Product HERO_INK_PEN = new Product("Hero ink Pen", FIFTY_RUPEES, FIFTY_GRAM);
 
     @Test
     public void shouldGiveDiscount() {
